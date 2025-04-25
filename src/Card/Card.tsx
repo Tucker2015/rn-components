@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import type { ICardProps } from './Card.types';
 import { styles } from './CardStyles';
+import Button from '../Button/Button';
 
 const Card = (props: ICardProps) => {
   return (
@@ -38,6 +39,9 @@ const Card = (props: ICardProps) => {
       >
         {props.description}
       </Text>
+      {props.buttonEnabled && (
+        <Button title={props.buttonText} onPress={props.buttonOnPress} />
+      )}
     </View>
   );
 };

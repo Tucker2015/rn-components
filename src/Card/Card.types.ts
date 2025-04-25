@@ -1,4 +1,7 @@
 export interface ICardProps {
+  buttonEnabled?: boolean;
+  buttonText?: string | undefined;
+  buttonOnPress?: () => void;
   children?: React.ReactNode;
   titleFontFamily?: string;
   titleFontSize?: number;
