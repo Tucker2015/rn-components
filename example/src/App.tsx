@@ -18,8 +18,9 @@ export default function App() {
   return (
     <Layout isSafeArea backgroundColor="hsl(0, 0.70%, 71.60%)" isCenter>
       <Card
+        image="https://picsum.photos/300"
         buttonEnabled
-        buttonText="Click Me"
+        buttonText="Read More"
         buttonOnPress={() => {
           console.log('Button Pressed');
         }}

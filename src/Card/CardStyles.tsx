@@ -4,7 +4,6 @@ export const styles = StyleSheet.create({
   card: {
     backgroundColor: 'hsl(0, 0.00%, 96.90%)',
     borderRadius: 8,
-    padding: 16,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -13,6 +12,10 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    overflow: 'hidden',
+  },
+  cardContent: {
+    padding: 16,
   },
   description: {
     fontSize: 14,
@@ -26,5 +29,9 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
+  },
+  image: {
+    width: 'auto',
+    height: 200,
   },
 });
