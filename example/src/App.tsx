@@ -1,4 +1,4 @@
-import { Layout, Card } from 'rn-components';
+import { Layout, Card } from '@kevtucker/rn-components';
 import {
   Inter_400Regular,
   Inter_600SemiBold,
