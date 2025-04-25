@@ -16,8 +16,13 @@ export default function App() {
     return null;
   }
   return (
-    <Layout isCenter isSafeArea padding={20}>
+    <Layout isSafeArea backgroundColor="hsl(0, 0.70%, 71.60%)" isCenter>
       <Card
+        buttonEnabled
+        buttonText="Click Me"
+        buttonOnPress={() => {
+          console.log('Button Pressed');
+        }}
         titleFontSize={20}
         descriptionFontFamily="Inter"
         titleFontFamily="InterBlack"
