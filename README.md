@@ -6,17 +6,25 @@ A collection of React Native and Expo UI Components
 
 ```sh
 npm install rn-components
+
+# or
+
+yarn add rn-components
 ```
 
 ## Usage
 
 
 ```js
-import { multiply } from 'rn-components';
+import { Card } from 'rn-components';
 
 // ...
 
-const result = await multiply(3, 7);
+  <Card
+    width={`95%`}
+    description="This is a description"
+    title="Card Title"
+    />
 ```
 
 

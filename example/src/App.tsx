@@ -1,20 +1,13 @@
-import { multiply } from 'rn-components';
-import { Text, View, StyleSheet } from 'react-native';
-
-const result = multiply(3, 7);
+import { Layout, Card } from 'rn-components';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <Layout isCenter isSafeArea padding={20}>
+      <Card
+        width={`95%`}
+        description="This is a description"
+        title="Card Title"
+      />
+    </Layout>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
