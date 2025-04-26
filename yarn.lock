@@ -1959,6 +1959,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo-google-fonts/lato@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@expo-google-fonts/lato@npm:0.3.0"
+  checksum: 82623c86403aa496b73e7653df8965229b644a26c9d69b343e75999a28e5e43d932e75998fa24cdd27c0ea3ff0832bf0e8e0b25c069ccf22f7e55cbcf69d0257
+  languageName: node
+  linkType: hard
+
 "@expo/bunyan@npm:^4.0.0":
   version: 4.0.1
   resolution: "@expo/bunyan@npm:4.0.1"
@@ -12411,6 +12418,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.0
     "@expo-google-fonts/inter": ^0.3.0
+    "@expo-google-fonts/lato": ^0.3.0
     "@expo/metro-runtime": ~4.0.1
     expo: ~52.0.46
     expo-font: ~13.0.4
