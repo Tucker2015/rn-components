@@ -1,4 +1,9 @@
 export interface ICardProps {
+  /**
+   * Enable to use a Divider between title and description
+   * @default true
+   */
+  hasDivider?: boolean;
   buttonEnabled?: boolean;
   buttonText?: string | undefined;
   buttonOnPress?: () => void;

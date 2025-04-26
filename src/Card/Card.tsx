@@ -35,7 +35,7 @@ const Card = (props: ICardProps) => {
         >
           {props.title}
         </Text>
-        <View style={styles.divider} />
+        {props.hasDivider !== false && <View style={styles.divider} />}
         <Text
           style={[
             styles.description,

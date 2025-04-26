@@ -1,11 +1,7 @@
 import { Text } from 'react-native';
+import type { ITextProps } from './Text.types';
 
-type Props = {
-  title: string;
-  style?: object;
-};
-
-const TextComponent = (props: Props) => {
+const TextComponent = (props: ITextProps) => {
   return <Text style={{ ...props.style }}>{props.title}</Text>;
 };
 

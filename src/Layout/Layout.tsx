@@ -1,7 +1,7 @@
-import { SafeAreaView, View } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './LayoutStyles';
 import type { LayoutTypes } from './Layout.types';
-
+import { SafeAreaView } from 'react-native-safe-area-context';
 const Layout = ({
   children,
   isSafeArea,

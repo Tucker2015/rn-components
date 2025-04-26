@@ -5,12 +5,14 @@ A collection of React Native and Expo UI Components
 ## Installation
 
 ```sh
-npm install rn-components
+npm install rn-components react-native-safe-area-context
 
 # or
 
-yarn add rn-components
+yarn add rn-components react-native-safe-area-context
 ```
+
+> **Note:** You must also install `react-native-safe-area-context` in your project, as it is a peer dependency.
 
 ## Usage
 
