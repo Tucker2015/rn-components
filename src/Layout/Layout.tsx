@@ -7,7 +7,7 @@ const Layout = ({
   isSafeArea,
   backgroundColor,
   padding,
-  isCenter,
+  isCentered,
   isJustify,
 }: LayoutTypes) => {
   return isSafeArea ? (
@@ -18,7 +18,7 @@ const Layout = ({
           backgroundColor: backgroundColor ?? 'hsl(0, 0.00%, 100.00%)',
           padding: padding ?? 0,
           ...(isJustify ? { justifyContent: 'center' } : {}),
-          ...(isCenter ? { alignItems: 'center' } : {}),
+          ...(isCentered ? { alignItems: 'center' } : {}),
         },
       ]}
     >
@@ -32,7 +32,7 @@ const Layout = ({
           backgroundColor: backgroundColor ?? 'hsl(0, 0.00%, 60.00%)',
           padding: padding ?? 0,
           ...(isJustify ? { justifyContent: 'center' } : {}),
-          ...(isCenter ? { alignItems: 'center' } : {}),
+          ...(isCentered ? { alignItems: 'center' } : {}),
         },
       ]}
     >

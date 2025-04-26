@@ -1,6 +1,6 @@
 export interface LayoutTypes {
   padding?: number;
-  isCenter?: boolean;
+  isCentered?: boolean;
   isJustify?: boolean;
   backgroundColor?: string;
   isSafeArea?: boolean;
