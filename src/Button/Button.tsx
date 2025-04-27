@@ -9,7 +9,7 @@ type Props = {
 const Button = (props: Props) => {
   return (
     <Pressable style={styles.button} onPress={props.onPress}>
-      <Text style={styles.buttonText}>{props.title}</Text>
+      <Text style={styles.buttonText}>{props.title || 'Press Here'}</Text>
     </Pressable>
   );
 };

@@ -12,6 +12,7 @@ import {
 import Homescreen from './Homescreen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import { Loader } from '@kevtucker/rn-components';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,12 +24,22 @@ export default function App() {
     LatoBlack: Lato_900Black,
   });
   if (!fontsLoaded) {
-    return null;
+    return (
+      <Loader
+        blurRadius={3}
+        backgroundImage={require('./assets/store.jpg')}
+        overlayColor="rgba(0, 0, 0, 0.68)"
+        text="Please wait..."
+        textColor="rgb(255, 255, 255)"
+        indicatorColor="rgb(255, 255, 255)"
+        indicatorSize="large"
+      />
+    );
   }
   return (
     <SafeAreaProvider>
+      <StatusBar style="auto" />
       <Homescreen />
-      <StatusBar style="light" />
     </SafeAreaProvider>
   );
 }
