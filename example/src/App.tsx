@@ -38,8 +38,8 @@ export default function App() {
   }
   return (
     <SafeAreaProvider>
-      <StatusBar style="auto" />
       <Homescreen />
+      <StatusBar style="light" />
     </SafeAreaProvider>
   );
 }

@@ -1,6 +1,10 @@
 # rn-components
 
-A collection of React Native and Expo UI Components
+A collection of React Native and Expo UI Components including :
+- **Card**: A simple card component with a title and description.
+- **Button**: A simple button component with a title and onPress handler.
+- **Text**: A simple text component with a title.
+- **Layout**: A simple layout component with a Image Background prop and a children prop.
 
 ## Installation
 
@@ -26,7 +30,7 @@ import { Card } from 'rn-components';
     width={`95%`}
     description="This is a description"
     title="Card Title"
-    />
+  />
 ```
 
 
