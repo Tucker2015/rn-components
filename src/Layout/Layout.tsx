@@ -12,11 +12,16 @@ const Layout = ({
   isImageBackground,
   backgroundImage,
   overlayColor,
+  imageBackgroundBlurRadius,
 }: LayoutTypes) => {
   // Both SafeArea and ImageBackground
   if (isSafeArea && isImageBackground) {
     return (
-      <ImageBackground source={backgroundImage} style={styles.container}>
+      <ImageBackground
+        blurRadius={imageBackgroundBlurRadius ?? 0}
+        source={backgroundImage}
+        style={styles.container}
+      >
         <View
           style={[styles.backgroundOverlay, { backgroundColor: overlayColor }]}
         />
@@ -57,7 +62,11 @@ const Layout = ({
   // Only ImageBackground
   if (isImageBackground) {
     return (
-      <ImageBackground source={backgroundImage} style={styles.container}>
+      <ImageBackground
+        blurRadius={imageBackgroundBlurRadius ?? 0}
+        source={backgroundImage}
+        style={styles.container}
+      >
         <View
           style={[styles.backgroundOverlay, { backgroundColor: overlayColor }]}
         />
