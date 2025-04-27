@@ -18,7 +18,9 @@ const Card = (props: ICardProps) => {
     >
       {props.image && (
         <Image
-          source={{ uri: props.image }}
+          source={
+            typeof props.image === 'string' ? { uri: props.image } : props.image
+          }
           style={[styles.image]}
           resizeMode="cover"
         />

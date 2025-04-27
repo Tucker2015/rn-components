@@ -6,4 +6,5 @@ export interface ITextProps {
   shadowEnabled?: boolean;
   fontFamily?: string;
   fontSize?: number;
+  letterSpacing?: number;
 }

@@ -11,6 +11,7 @@ const TextComponent = (props: ITextProps) => {
     fontSize,
     textAlign,
     textColor,
+    letterSpacing,
   } = props;
   return (
     <Text
@@ -21,6 +22,7 @@ const TextComponent = (props: ITextProps) => {
         fontSize ? { fontSize } : undefined,
         textAlign ? { textAlign } : undefined,
         textColor ? { color: textColor } : undefined,
+        letterSpacing ? { letterSpacing } : undefined,
       ]}
     >
       {title}
