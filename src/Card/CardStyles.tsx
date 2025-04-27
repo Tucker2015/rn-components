@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   card: {
     backgroundColor: 'hsl(0, 0.00%, 96.90%)',
     borderRadius: 8,
-    shadowColor: '#000',
+    shadowColor: '#000', // Use a solid color for shadowColor
     shadowOffset: {
       width: 0,
       height: 2,
@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 10,
-    overflow: 'hidden',
   },
   cardContent: {
     padding: 16,
@@ -33,5 +32,10 @@ export const styles = StyleSheet.create({
   image: {
     width: 'auto',
     height: 200,
+  },
+  imageWrapper: {
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+    overflow: 'hidden',
   },
 });

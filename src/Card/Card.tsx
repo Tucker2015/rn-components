@@ -17,13 +17,17 @@ const Card = (props: ICardProps) => {
       ]}
     >
       {props.image && (
-        <Image
-          source={
-            typeof props.image === 'string' ? { uri: props.image } : props.image
-          }
-          style={[styles.image]}
-          resizeMode="cover"
-        />
+        <View style={styles.imageWrapper}>
+          <Image
+            source={
+              typeof props.image === 'string'
+                ? { uri: props.image }
+                : props.image
+            }
+            style={styles.image}
+            resizeMode="cover"
+          />
+        </View>
       )}
       <View style={styles.cardContent}>
         <Text
