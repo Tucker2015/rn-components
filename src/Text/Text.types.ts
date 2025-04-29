@@ -1,5 +1,5 @@
 export interface ITextProps {
-  title: string;
+  text: string;
   style?: object;
   textColor?: string;
   textAlign?: 'left' | 'right' | 'center' | 'justify';
@@ -7,4 +7,6 @@ export interface ITextProps {
   fontFamily?: string;
   fontSize?: number;
   letterSpacing?: number;
+  marginTop?: number;
+  marginBottom?: number;
 }

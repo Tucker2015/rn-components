@@ -2,9 +2,11 @@ import { Text } from 'react-native';
 import type { ITextProps } from './Text.types';
 import { styles } from './TextStyles';
 
-const TextComponent = (props: ITextProps) => {
+const TextComponent = (
+  props: ITextProps & React.ComponentProps<typeof Text>
+) => {
   const {
-    title,
+    text,
     style,
     shadowEnabled,
     fontFamily,
@@ -12,6 +14,9 @@ const TextComponent = (props: ITextProps) => {
     textAlign,
     textColor,
     letterSpacing,
+    marginTop,
+    marginBottom,
+    ...otherProps
   } = props;
   return (
     <Text
@@ -23,9 +28,12 @@ const TextComponent = (props: ITextProps) => {
         textAlign ? { textAlign } : undefined,
         textColor ? { color: textColor } : undefined,
         letterSpacing ? { letterSpacing } : undefined,
+        marginTop ? { marginTop } : undefined,
+        marginBottom ? { marginBottom } : undefined,
       ]}
+      {...otherProps}
     >
-      {title}
+      {text}
     </Text>
   );
 };
