@@ -6,12 +6,17 @@ export interface ICardProps {
   hasDivider?: boolean;
   buttonEnabled?: boolean;
   buttonText?: string | undefined;
+  buttonTextColor?: string;
+  buttonBackgroundColor?: string;
   buttonOnPress?: () => void;
+  backgroundColor?: string;
   children?: React.ReactNode;
   titleFontFamily?: string;
   titleFontSize?: number;
+  titleTextColor?: string;
   descriptionFontSize?: number;
   descriptionFontFamily?: string;
+  descriptionTextColor?: string;
   title?: string;
   description?: string;
   image?: string;

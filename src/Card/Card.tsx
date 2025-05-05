@@ -14,6 +14,7 @@ const Card = (props: ICardProps) => {
         props.height !== undefined && {
           height: props.height as import('react-native').DimensionValue,
         },
+        props.backgroundColor && { backgroundColor: props.backgroundColor },
       ]}
     >
       {props.image && (
@@ -37,11 +38,13 @@ const Card = (props: ICardProps) => {
               ? { fontFamily: props.titleFontFamily }
               : null,
             props.titleFontSize ? { fontSize: props.titleFontSize } : null,
+            props.titleTextColor ? { color: props.titleTextColor } : null,
           ]}
         >
           {props.title}
         </Text>
         {props.hasDivider !== false && <View style={styles.divider} />}
+        {props.children}
         <Text
           style={[
             styles.description,
@@ -51,12 +54,22 @@ const Card = (props: ICardProps) => {
             props.descriptionFontSize
               ? { fontSize: props.descriptionFontSize }
               : null,
+            props.descriptionTextColor
+              ? { color: props.descriptionTextColor }
+              : null,
           ]}
         >
           {props.description}
         </Text>
         {props.buttonEnabled && (
-          <Button title={props.buttonText} onPress={props.buttonOnPress} />
+          <Button
+            backgroundColor={
+              props.buttonBackgroundColor || 'rgba(84, 139, 154, 0.65)'
+            }
+            textColor={props.buttonTextColor || 'white'}
+            title={props.buttonText}
+            onPress={props.buttonOnPress}
+          />
         )}
       </View>
     </View>
