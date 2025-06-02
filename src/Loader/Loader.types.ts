@@ -7,4 +7,6 @@ export interface ILoaderTypes {
   backgroundImage?: any;
   overlayColor?: string;
   blurRadius?: number;
+  fontFamily?: string;
+  fontSize?: number;
 }

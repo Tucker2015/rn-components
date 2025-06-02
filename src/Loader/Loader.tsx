@@ -1,6 +1,7 @@
-import { View, ActivityIndicator, Text, ImageBackground } from 'react-native';
+import { View, ActivityIndicator, ImageBackground } from 'react-native';
 import { styles } from './LoaderStyles';
 import type { ILoaderTypes } from './Loader.types';
+import { Text } from '..';
 const Loader = ({
   indicatorSize = 'large',
   indicatorColor = '#000000',
@@ -10,6 +11,8 @@ const Loader = ({
   backgroundImage,
   overlayColor = 'rgba(0,0,0,0.5)',
   blurRadius,
+  fontFamily,
+  fontSize,
 }: ILoaderTypes) => {
   return backgroundImage ? (
     <ImageBackground
@@ -23,13 +26,25 @@ const Loader = ({
       />
       <View style={styles.container}>
         <ActivityIndicator size={indicatorSize} color={indicatorColor} />
-        <Text style={[styles.text, { color: textColor }]}>{text}</Text>
+        <Text
+          text={text}
+          style={[
+            styles.text,
+            { color: textColor, fontFamily: fontFamily, fontSize },
+          ]}
+        />
       </View>
     </ImageBackground>
   ) : (
     <View style={[styles.container, { backgroundColor }]}>
       <ActivityIndicator size={indicatorSize} color={indicatorColor} />
-      <Text style={[styles.text, { color: textColor }]}>{text}</Text>
+      <Text
+        text={text}
+        style={[
+          styles.text,
+          { color: textColor, fontFamily: fontFamily, fontSize },
+        ]}
+      />
     </View>
   );
 };

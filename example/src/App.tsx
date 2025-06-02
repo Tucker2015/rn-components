@@ -23,9 +23,11 @@ export default function App() {
     LatoBold: Lato_700Bold,
     LatoBlack: Lato_900Black,
   });
-  if (!fontsLoaded) {
+  if (fontsLoaded) {
     return (
       <Loader
+        fontFamily="LatoBlack"
+        fontSize={20}
         blurRadius={3}
         backgroundImage={require('./assets/store.jpg')}
         overlayColor="rgba(0, 0, 0, 0.68)"
