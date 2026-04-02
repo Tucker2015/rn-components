@@ -9,6 +9,7 @@ const TextComponent = (
     text,
     style,
     shadowEnabled,
+    shadowColor,
     fontFamily,
     fontSize,
     textAlign,
@@ -22,6 +23,7 @@ const TextComponent = (
     <Text
       style={[
         shadowEnabled && styles.shadow,
+        shadowColor ? { textShadowColor: shadowColor } : undefined,
         style,
         fontFamily ? { fontFamily } : undefined,
         fontSize ? { fontSize } : undefined,

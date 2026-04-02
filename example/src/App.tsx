@@ -23,7 +23,7 @@ export default function App() {
     LatoBold: Lato_700Bold,
     LatoBlack: Lato_900Black,
   });
-  if (fontsLoaded) {
+  if (!fontsLoaded) {
     return (
       <Loader
         fontFamily="LatoBlack"
